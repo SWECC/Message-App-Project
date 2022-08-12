@@ -1,9 +1,13 @@
 const functions = require("firebase-functions");
+import  express  from "express";
+import { Message } from "firebase-functions/v1/pubsub";
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+
+const app = express()
+
+
+
+
+
+
+exports.api = functions.https.onRequest(app)
