@@ -1,6 +1,7 @@
-import { dbConnect } from "./dbconnect";
+import { dbConnect } from "./dbconnect.js";
 import cors from "cors";
 
-export function getMessages(req,res){
-    res.send('hello')
+
+export function addMessage(req, res) {
+
 }
