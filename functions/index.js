@@ -1,14 +1,18 @@
 const functions = require("firebase-functions");
-import  express  from "express";
+import  express from 'express';
 import cors from 'cors';
-import { getMessages, addMessage } from "./getroute";
+import {getMessages} from "./getroute.js";
 
 
 const app = express()
+const port = 3003
 app.use(express.json())
 app.use(cors())
 
 app.get('/messages', getMessages)
 app.post('/messages', addMessage)
 
-exports.api = functions.https.onRequest(app)
+app.listen(port, () => {
+    console.log('listening')
+})
+export const api = functions.https.onRequest(app)
