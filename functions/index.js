@@ -1,7 +1,7 @@
 const functions = require("firebase-functions");
 import  express  from "express";
 import cors from 'cors';
-import { getMessages, addMessage } from "./getroute";
+import { getMessages, addMessage } from "./getroute.js";
 
 
 const app = express()
@@ -11,4 +11,4 @@ app.use(cors())
 app.get('/messages', getMessages)
 app.post('/messages', addMessage)
 
-exports.api = functions.https.onRequest(app)
+export const api = functions.https.onRequest(app)
