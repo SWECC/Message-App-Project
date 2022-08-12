@@ -1,5 +1,6 @@
-import { dbConnect } from "./dbconnect";
+import { dbConnect } from "./dbconnect.js";
 import cors from "cors";
+
 
 export function getMessages(req,res){
     const db = dbConnect();
@@ -16,4 +17,8 @@ export function getMessages(req,res){
 function handleError(err,res){
     console.error(err)
     res.status(500).send(err)
+}
+
+export function addMessage(req, res) {
+
 }
