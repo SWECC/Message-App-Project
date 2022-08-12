@@ -11,5 +11,9 @@
       "host": "localhost",
       "port": "3002"
     }
-  }
+  },
+   "rewrites":[{
+    "source": "**",
+    "function": "api"
+  }]
 }

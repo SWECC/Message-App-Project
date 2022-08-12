@@ -5,7 +5,7 @@ import {getMessages, addMessage} from "./getroute.js";
 
 
 const app = express()
-const port = 3333;
+// const port = 3333;
 app.use(express.json())
 app.use(cors())
 
