@@ -13,7 +13,7 @@ app.get('/messages', getMessages)
 app.post('/messages', addMessage)
 
 // app.listen(port, () => {
-//     console.log('listening')
+// console.log('listening')
 // })
 
 export const api = functions.https.onRequest(app)
