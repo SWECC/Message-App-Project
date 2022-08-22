@@ -9,7 +9,14 @@
   }, "emulators": {
     "hosting": {
       "host": "localhost",
-      "port": "5005"
+
+      "port": "3002"
     }
-  }
-}
+  },
+
+   "rewrites":[{
+    "source": "**",
+    "function": "api"
+  }]
+
+   }
